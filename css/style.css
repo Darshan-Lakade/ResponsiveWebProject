@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #ffffff !important;
+}
+
+body {
+  background-color: azure;
+  font-family: "Open Sans", serif !important;
+  font-size: 15px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 0.1rem;
+  overflow-x: hidden !important;
+}
+
+.fluid-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1140px !important;
+}
+
+.main-header {
+  background-color: #308c9c;
+  height: 100px;
+}
+
+.main-header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.main-header .header-container .main-logo {
+  padding: 10px;
+  display: block;
+}
+
+.main-header .header-container .main-nav {
+  position: absolute;
+  right: 0;
+}
+
+.main-header .header-container .main-nav .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-header .header-container .main-nav .nav-ul .nav-li {
+  text-transform: uppercase;
+  color: #ac1e1e !important;
+}
+
+.main-header .header-container .main-nav .nav-ul .nav-li a {
+  padding: 38px 20px;
+  display: block;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.main-header .header-container .main-nav .nav-ul .nav-li a:hover {
+  background-color: #215b72;
+  text-decoration: none;
+}
+
+.main-header .header-container .nav-burger {
+  position: absolute;
+  right: 0;
+  margin: 38px 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.main-header .header-container .nav-burger p {
+  background-color: #ffffff;
+  padding: 2px 12px;
+  margin: 3px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-header .fluid-container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header .fluid-container {
+    width: 100%;
+  }
+  .nav-burger {
+    display: block !important;
+  }
+  .main-nav {
+    top: 100px;
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  .main-nav .nav-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-nav .nav-ul .nav-li {
+    background-color: #308c9c;
+    text-align: center;
+  }
+  .slider {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .main-header .fluid-container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
