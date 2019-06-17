@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+// Variables 
+$noneStyle : none;
+$headerBG : rgb(48, 140, 156);
+$SourceSansFont : 'Open Sans';
+
+// Global Css
+
+*{
+    padding:0;
+    margin:0;
+}
+
+li{
+    list-style: $noneStyle;
+}
+
+a{
+    text-decoration: $noneStyle;
+    display: block;
+    color: #ffffff !important;
+}
+
+body{
+    background-color: azure;
+    font-family: $SourceSansFont, serif !important;
+    font-size: 15px !important;
+    box-sizing: border-box;
+    letter-spacing: 0.1rem;
+    overflow-x: hidden !important;
+}
+
+.fluid-container{
+    width: 80%;
+    margin: 0 auto;
+    max-width:1140px !important;
+}
+
+// Header Section ////////////////
+
+.main-header{
+    background-color: $headerBG;
+    height: 100px;
+    .header-container{
+        display:flex;
+        position: relative;
+        .main-logo{
+            padding: 10px;
+            display: block;
+        }
+        .main-nav{
+            position: absolute;
+            right: 0;
+            .nav-ul{
+                display: flex;
+                .nav-li{  
+                    text-transform: uppercase;
+                    color: rgb(172, 30, 30) !important;
+                    a{
+                        padding: 38px 20px;
+                        display: block;
+                        transition: background-color 0.5s ease-out;
+                        &:hover{
+                            background-color: rgb(33, 91, 114);
+                            text-decoration: $noneStyle;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-burger{
+            position: absolute;
+            right: 0;
+            margin:38px 30px;
+            cursor: pointer;
+            display:none;
+            p{
+                background-color: #ffffff;
+                padding: 2px 12px;
+                margin:3px;
+            }
+        }
+    }
+    
+}
+
+
+// Media Querries
+
+@media only screen and (max-width:1024px){
+
+    .main-header{
+        .fluid-container{
+            width:85%;
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .main-header{
+        .fluid-container{
+            width:100%;
+        }
+    }
+
+    
+    .nav-burger{
+        display: block !important;
+    }
+    
+    .main-nav{
+        top:100px;
+        width: 100%;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.5s ease-out;
+        .nav-ul{
+            flex-direction: column;
+            .nav-li{  
+                background-color: $headerBG;
+                text-align:center;
+            }
+        }
+    }
+    // Slider class
+
+    .slider{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@media only screen and (max-width:540px){
+
+    .main-header{
+        .fluid-container{
+            width:100%;
+        }
+    }
+}
